@@ -343,6 +343,7 @@ extern "C" {
 #define XVTC_VMODE_1080I	100	/**< Video mode 1080I */
 #define XVTC_VMODE_NTSC		101	/**< Video mode NTSC */
 #define XVTC_VMODE_PAL		102	/**< Video mode PAL */
+#define XVTC_VMODE_PATTERN_CUSTOM  103 /**< Video mode for Pattern Function */
 /*@}*/
 
 /**************************** Type Definitions *******************************/

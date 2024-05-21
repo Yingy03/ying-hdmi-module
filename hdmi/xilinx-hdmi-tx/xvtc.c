@@ -2109,6 +2109,26 @@ void XVtc_ConvVideoMode2Timing(XVtc *InstancePtr, u16 Mode,
 	}
 
 	// add other video formats here
+	// Added by Yingying Gao
+	case XVTC_VMODE_PATTERN_CUSTOM: // 912x1140@60
+	{
+		// Horizontal Timing
+		TimingPtr->HActiveVideo  = 912; // pixeles activos horizontalmente 
+		TimingPtr->HFrontPorch   = 16; // porche frontal horizontal estimado 
+		TimingPtr->HSyncWidth    = 120; // ancho de sincronización horizontal 
+		TimingPtr->HBackPorch    = 144; // porche trasero horizontal 
+		TimingPtr->HSyncPolarity = 0; // polaridad de sincronización horizontal
+
+		// Vertical Timing
+		TimingPtr->VActiveVideo  = 1140; // pixeles activos verticalmente 
+		TimingPtr->V0FrontPorch   = 3; // porche frontal vertical estimado 
+		TimingPtr->V0SyncWidth    = 5; // ancho de sincronización vertical 
+		TimingPtr->V0BackPorch    = 5; // porche trasero vertical 
+		TimingPtr->VSyncPolarity = 0; // polaridad de sincronización vertical
+
+		break;
+	}
+
 	}
 }
 
